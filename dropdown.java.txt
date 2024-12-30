@@ -1,0 +1,26 @@
+package selenium.browser;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebDriver;
+public class login {
+
+	public static void main(String[] args) throws InterruptedException {
+		//System.setproperty("webdriver.chrome.driver",chromedriver."C:\Users\Admin\Downloads\chrome-win64 (1)");
+		WebDriver driver = new ChromeDriver();     
+		driver.get("https://www.myntra.com/");
+		Thread.sleep(3000);
+		driver.get("https://www.facebook.com/r.php?entry_point=login");
+		driver.findElement(By.id("email"));
+		Thread.sleep(3000);
+		driver.findElement(By.name("pass"));
+		Thread.sleep(3000);
+		driver.findElement(By.name("login"));
+		Thread.sleep(5000);
+		driver.close();
+		driver.quit();
+		
+		
+
+	}
+
+}
